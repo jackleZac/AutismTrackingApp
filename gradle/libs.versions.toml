@@ -1,0 +1,29 @@
+[versions]
+firebase = "33.1.2"
+androidGradlePlugin = "8.7.0"
+kotlin = "2.1.20"
+firebaseDatabase = "21.0.0"
+firebaseAuth = "23.2.1"
+navigationFragment = "2.9.1"
+navigationUi = "2.9.1"
+navigation = "2.8.3"
+
+[libraries]
+firebase-database = { module = "com.google.firebase:firebase-database", version.ref = "firebase" }
+firebase-auth = { module = "com.google.firebase:firebase-auth", version.ref = "firebase" }
+appcompat = { module = "androidx.appcompat:appcompat", version = "1.7.0" }
+material = { module = "com.google.android.material:material", version = "1.12.0" }
+activity = { module = "androidx.activity:activity", version = "1.9.3" }
+constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version = "2.1.4" }
+junit = { module = "junit:junit", version = "4.13.2" }
+ext-junit = { module = "androidx.test.ext:junit", version = "1.2.1" }
+espresso-core = { module = "androidx.test.espresso:espresso-core", version = "3.6.1" }
+google-firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+google-firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
+navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
+navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigationUi" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+google-services = { id = "com.google.gms.google-services", version = "4.4.3" }
+

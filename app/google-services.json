@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "215482718890",
+    "project_id": "autismtrackingapp-b7a2f",
+    "storage_bucket": "autismtrackingapp-b7a2f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215482718890:android:a74d3fdc0561db9a30ced3",
+        "android_client_info": {
+          "package_name": "com.example.autismtrackingapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCshidaI1xDbCnfsDfEvD2m_NWwkC-VAIQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

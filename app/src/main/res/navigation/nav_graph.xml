@@ -1,0 +1,31 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dietaryListFragment">
+    <fragment
+        android:id="@+id/dietaryListFragment"
+        android:name="com.example.autismtrackingapp.DietaryListFragment"
+        android:label="Dietary Entries">
+        <action android:id="@+id/to_medicalRecordsFragment" app:destination="@id/medicalRecordsFragment" />
+        <action android:id="@+id/to_activityBehaviorFragment" app:destination="@id/activityBehaviorFragment" />
+        <action android:id="@+id/to_summaryFragment" app:destination="@id/summaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicalRecordsFragment"
+        android:name="com.example.autismtrackingapp.MedicalRecordsFragment"
+        android:label="Medical Records">
+        <action android:id="@+id/to_dietaryListFragment" app:destination="@id/dietaryListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/activityBehaviorFragment"
+        android:name="com.example.autismtrackingapp.ActivityBehaviorFragment"
+        android:label="Activity and Behavior">
+        <action android:id="@+id/to_dietaryListFragment" app:destination="@id/dietaryListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.example.autismtrackingapp.SummaryFragment"
+        android:label="Summary">
+        <action android:id="@+id/to_dietaryListFragment" app:destination="@id/dietaryListFragment" />
+    </fragment>
+</navigation>
