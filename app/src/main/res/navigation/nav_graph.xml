@@ -7,8 +7,12 @@
         android:name="com.example.autismtrackingapp.DietaryListFragment"
         android:label="Dietary Entries">
         <action android:id="@+id/to_medicalRecordsFragment" app:destination="@id/medicalRecordsFragment" />
+        <action android:id="@+id/to_medicationsListFragment" app:destination="@id/medicationsListFragment" />
         <action android:id="@+id/to_activityBehaviorFragment" app:destination="@id/activityBehaviorFragment" />
+        <action android:id="@+id/to_profileViewFragment" app:destination="@id/profileViewFragment" />
         <action android:id="@+id/to_summaryFragment" app:destination="@id/summaryFragment" />
+        <action android:id="@+id/to_medicationsActivity" app:destination="@id/medicationsActivity" />
+        <action android:id="@+id/to_profileActivity" app:destination="@id/profileActivity" />
     </fragment>
     <fragment
         android:id="@+id/medicalRecordsFragment"
@@ -17,10 +21,24 @@
         <action android:id="@+id/to_dietaryListFragment" app:destination="@id/dietaryListFragment" />
     </fragment>
     <fragment
+        android:id="@+id/medicationsListFragment"
+        android:name="com.example.autismtrackingapp.MedicationsListFragment"
+        android:label="Medications List">
+        <action android:id="@+id/to_dietaryListFragment" app:destination="@id/dietaryListFragment" />
+        <action android:id="@+id/to_medicationsActivity" app:destination="@id/medicationsActivity" />
+    </fragment>
+    <fragment
         android:id="@+id/activityBehaviorFragment"
         android:name="com.example.autismtrackingapp.ActivityBehaviorFragment"
         android:label="Activity and Behavior">
         <action android:id="@+id/to_dietaryListFragment" app:destination="@id/dietaryListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileViewFragment"
+        android:name="com.example.autismtrackingapp.ProfileViewFragment"
+        android:label="Profile">
+        <action android:id="@+id/to_dietaryListFragment" app:destination="@id/dietaryListFragment" />
+        <action android:id="@+id/to_profileActivity" app:destination="@id/profileActivity" />
     </fragment>
     <fragment
         android:id="@+id/summaryFragment"
@@ -28,4 +46,12 @@
         android:label="Summary">
         <action android:id="@+id/to_dietaryListFragment" app:destination="@id/dietaryListFragment" />
     </fragment>
+    <activity
+        android:id="@+id/medicationsActivity"
+        android:name="com.example.autismtrackingapp.MedicationsActivity"
+        android:label="Add Medication" />
+    <activity
+        android:id="@+id/profileActivity"
+        android:name="com.example.autismtrackingapp.ProfileActivity"
+        android:label="Edit Profile" />
 </navigation>

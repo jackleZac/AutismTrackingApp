@@ -1,11 +1,5 @@
 package com.example.autismtrackingapp;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,7 +9,15 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class SummaryFragment extends Fragment {
     private TextView summaryText;
@@ -29,6 +31,15 @@ public class SummaryFragment extends Fragment {
         shareButton = view.findViewById(R.id.share_button);
         database = FirebaseDatabase.getInstance().getReference("users")
                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+
+        // Set up Toolbar for back navigation
+        Toolbar toolbar = view.findViewById(R.id.toolbar);
+        toolbar.setTitle("Show Summary");
+        toolbar.setNavigationIcon(androidx.appcompat.R.drawable.abc_ic_ab_back_material);
+        toolbar.setNavigationOnClickListener(v -> {
+            android.util.Log.d("SummaryFragment", "Back arrow clicked");
+            Navigation.findNavController(v).navigateUp();
+        });
 
         database.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
